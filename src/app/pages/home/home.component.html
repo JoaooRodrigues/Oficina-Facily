@@ -1,0 +1,33 @@
+<div class="home-container">
+  <header class="home-header">
+    <div>
+      <h1>Oficina Facily</h1>
+      <p *ngIf="currentUser">Bem-vindo, {{ currentUser.nome }}!</p>
+    </div>
+    <div>
+      <button routerLink="/cadastro-veiculo" class="btn-action">Cadastrar Novo Veículo</button>
+      <button (click)="logout()" class="btn-logout">Sair</button>
+    </div>
+  </header>
+
+  <main>
+    <h2>Veículos em Manutenção</h2>
+    <div *ngIf="loadingVeiculos" class="loading-message">Carregando veículos...</div>
+    <div *ngIf="errorLoadingVeiculos" class="error-message">{{ errorLoadingVeiculos }}</div>
+
+    <div *ngIf="!loadingVeiculos && veiculosEmManutencao.length === 0 && !errorLoadingVeiculos" class="no-data-message">
+      Nenhum veículo em manutenção no momento.
+    </div>
+
+    <div class="veiculos-grid" *ngIf="!loadingVeiculos && veiculosEmManutencao.length > 0">
+      <div *ngFor="let veiculo of veiculosEmManutencao" class="veiculo-card">
+        <h3>{{ veiculo.marca }} {{ veiculo.modelo }}</h3>
+        <p><strong>Placa:</strong> {{ veiculo.placa }}</p>
+        <p><strong>Ano:</strong> {{ veiculo.ano }}</p>
+        <p><strong>Cliente:</strong> {{ veiculo.clienteNome }}</p>
+        <p><strong>Contato:</strong> {{ veiculo.contatoCliente }}</p>
+        <p><strong>Status:</strong> <span class="status-chip status-{{veiculo.status.replace(' ', '-')}}">{{ veiculo.status | titlecase }}</span></p>
+        </div>
+    </div>
+  </main>
+</div>

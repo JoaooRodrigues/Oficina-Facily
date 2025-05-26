@@ -1,59 +1,31 @@
-# Oficina20
+                                          Sistema de Gestão - Oficina de Automóveis
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.12.
+Este projeto é um sistema simples de gestão de clientes de uma oficina mecânica, desenvolvido com Angular. Ele permite login, cadastro de cliente e listagem de serviços .
 
-## Development server
+                                                              Tema
 
-To start a local development server, run:
+Oficina de Automóveis (Mecânica Geral)
+Gerenciamento básico de clientes e serviços prestados em uma oficina.
 
-```bash
-ng serve
-```
+ Requisitos Funcionais
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-## Code scaffolding
+- Tela de **Login** (com validação simples)
+- Tela de **Cadastro/Home** de clientes (usando JSON Server)
+- Tela de **Listagem de veiculos cadastrados** de clientes cadastrados
+     
+                                                   Tecnologias Utilizadas
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- Angular
+- HTML/CSS
+- TypeScript
+- JSON Server (API simulada)
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+                                                    Instalação e Execução
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Pré-requisitos:
+- Node.js instalado
+- Angular CLI instalado globalmente
+- JSON Server instalado (`npm install -g json-server`)

@@ -1,0 +1,45 @@
+<div class="cadastro-veiculo-container">
+  <h2>Cadastrar Novo Veículo</h2>
+  <a routerLink="/home" class="back-link">&laquo; Voltar para Home</a>
+  <form (ngSubmit)="onSubmit()" #veiculoForm="ngForm">
+    <div>
+      <label for="marca">Marca:</label>
+      <input type="text" id="marca" name="marca" [(ngModel)]="veiculo.marca" required #marcaField="ngModel">
+      <div *ngIf="marcaField.invalid && marcaField.touched" class="error-message">Marca é obrigatória.</div>
+    </div>
+    <div>
+      <label for="modelo">Modelo:</label>
+      <input type="text" id="modelo" name="modelo" [(ngModel)]="veiculo.modelo" required #modeloField="ngModel">
+      <div *ngIf="modeloField.invalid && modeloField.touched" class="error-message">Modelo é obrigatório.</div>
+    </div>
+    <div>
+      <label for="ano">Ano:</label>
+      <input type="number" id="ano" name="ano" [(ngModel)]="veiculo.ano" required #anoField="ngModel">
+      <div *ngIf="anoField.invalid && anoField.touched" class="error-message">Ano é obrigatório.</div>
+    </div>
+    <div>
+      <label for="placa">Placa:</label>
+      <input type="text" id="placa" name="placa" [(ngModel)]="veiculo.placa" required #placaField="ngModel" placeholder="ABC1D23">
+      <div *ngIf="placaField.invalid && placaField.touched" class="error-message">Placa é obrigatória.</div>
+    </div>
+    <div>
+      <label for="clienteNome">Nome do Cliente:</label>
+      <input type="text" id="clienteNome" name="clienteNome" [(ngModel)]="veiculo.clienteNome" required #clienteNomeField="ngModel">
+       <div *ngIf="clienteNomeField.invalid && clienteNomeField.touched" class="error-message">Nome do cliente é obrigatório.</div>
+    </div>
+     <div>
+      <label for="contatoCliente">Contato do Cliente (Email/Telefone):</label>
+      <input type="text" id="contatoCliente" name="contatoCliente" [(ngModel)]="veiculo.contatoCliente">
+    </div>
+    <div>
+      <label for="status">Status:</label>
+      <select id="status" name="status" [(ngModel)]="veiculo.status">
+        <option *ngFor="let s of statusOptions" [value]="s">{{ s | titlecase }}</option>
+      </select>
+    </div>
+
+    <button type="submit" [disabled]="veiculoForm.invalid">Cadastrar Veículo</button>
+    <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+    <p *ngIf="successMessage" class="success-message">{{ successMessage }}</p>
+  </form>
+</div>

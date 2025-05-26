@@ -1,0 +1,105 @@
+/* src/app/pages/login/login.component.css */
+
+.login-container {
+  max-width: 450px; /* Um pouco menor que o cadastro de veículo, opcional */
+  margin: 50px auto; /* Centraliza e adiciona margem no topo */
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave como nos cards */
+  background-color: #fff;
+}
+
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+  font-size: 1.8em;
+}
+
+.login-container form div {
+  margin-bottom: 20px; /* Aumenta o espaçamento entre os campos */
+}
+
+.login-container label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #555;
+}
+
+.login-container input[type="email"],
+.login-container input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.login-container input[type="email"]:focus,
+.login-container input[type="password"]:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.login-container button[type="submit"] {
+  width: 100%;
+  padding: 12px 15px;
+  background-color: #007bff; /* Azul padrão */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: background-color 0.3s ease;
+}
+
+.login-container button[type="submit"]:hover {
+  background-color: #0056b3; /* Azul mais escuro no hover */
+}
+
+.login-container button[type="submit"]:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: #dc3545; /* Vermelho para erros */
+  font-size: 0.9em;
+  margin-top: 8px;
+  padding: 8px;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.login-container p {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.95em;
+}
+
+.login-container p a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-container p a:hover {
+  text-decoration: underline;
+}
+
+/* Para as mensagens de erro de validação inline dos campos */
+.login-container form div .error-message {
+  color: #dc3545;
+  font-size: 0.85em;
+  margin-top: 5px;
+  padding: 0; /* Remove padding extra se for inline */
+  background-color: transparent; /* Remove fundo se for inline */
+  border: none; /* Remove borda se for inline */
+  text-align: left; /* Alinha à esquerda para erros de campo */
+}

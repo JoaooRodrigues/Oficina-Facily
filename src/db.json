@@ -1,0 +1,52 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nome": "Usuario Teste",
+      "email": "teste@email.com",
+      "senha": "123"
+    },
+    {
+      "id": "6001",
+      "nome": "Jozinho",
+      "email": "joaovitorhs1408@gmail.com",
+      "senha": "Gato123"
+    }
+  ],
+  "veiculos": [
+    {
+      "id": "1",
+      "usuarioId": "1",
+      "marca": "Fiat",
+      "modelo": "Uno",
+      "ano": 2020,
+      "placa": "ABC1D23",
+      "clienteNome": "João Silva",
+      "contatoCliente": "joao@email.com",
+      "status": "em manutencao" 
+    },
+    {
+      "id": "2",
+      "usuarioId": "1",
+      "marca": "Volkswagen",
+      "modelo": "Gol",
+      "ano": 2018,
+      "placa": "XYZ8B90",
+      "clienteNome": "Jeffeson Henrique",
+      "contatoCliente": "Jeff.o@email.com",
+      "status": "aguardando pecas"
+    },
+    {
+      "id": "3",
+      "usuarioId": "1",
+      "marca": "Chevrolet",
+      "modelo": "Onix",
+      "ano": 2022,
+      "placa": "QWE4R56",
+      "clienteNome": "Wagner Rodrigues",
+      "contatoCliente": "Wag.p@email.com",
+      "status": "em manutencao"
+    }
+  ],
+  "ordensDeServico": []
+}

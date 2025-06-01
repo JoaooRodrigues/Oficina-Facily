@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { AuthService } from './auth.service'; // Para pegar o usuarioId
+import { AuthService } from './auth.service'; 
 
 export interface Veiculo {
   id?: string;
-  usuarioId: string; // ID do usuário (mecânico/atendente) que cadastrou
+  usuarioId: string; 
   marca: string;
   modelo: string;
   ano: number;
@@ -13,7 +13,7 @@ export interface Veiculo {
   clienteNome: string;
   contatoCliente: string;
   status: 'em manutencao' | 'aguardando pecas' | 'concluido' | 'aguardando aprovacao' | 'liberado';
-  // Adicione outros campos conforme necessário: cor, chassi, observacoes, etc.
+  
 }
 
 @Injectable({
@@ -28,12 +28,12 @@ export class VehicleService {
     const currentUser = this.authService.currentUserValue;
     if (!currentUser || !currentUser.id) {
       throw new Error('Usuário não logado para cadastrar veículo.');
-      // Ou retornar Observable.throwError(() => new Error('...'))
+      
     }
     const veiculoCompleto: Veiculo = {
       ...veiculoData,
       usuarioId: currentUser.id,
-    } as Veiculo; // Type assertion because status is already in veiculoData
+    } as Veiculo; 
     return this.http.post<Veiculo>(this.apiUrl, veiculoCompleto);
   }
 

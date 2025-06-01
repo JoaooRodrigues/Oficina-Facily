@@ -7,19 +7,19 @@ export interface User {
   id?: string;
   nome: string;
   email: string;
-  senha?: string; // Senha não deve ser armazenada em plain text em produção!
+  senha?: string; 
 }
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = 'http://localhost:3000/usuarios'; // URL do json-server
+  private apiUrl = 'http://localhost:3000/usuarios'; 
   private currentUserSubject = new BehaviorSubject<User | null>(null);
   public currentUser$ = this.currentUserSubject.asObservable();
 
   constructor(private http: HttpClient, private router: Router) {
-    // Tentar carregar usuário do localStorage ao iniciar
+  
     const storedUser = localStorage.getItem('currentUser');
     if (storedUser) {
       this.currentUserSubject.next(JSON.parse(storedUser));
@@ -47,9 +47,7 @@ export class AuthService {
   register(user: User): Observable<User> {
     return this.http.post<User>(this.apiUrl, user).pipe(
       tap(newUser => {
-        // Opcional: Fazer login automático após o registro
-        // localStorage.setItem('currentUser', JSON.stringify(newUser));
-        // this.currentUserSubject.next(newUser);
+        
       })
     );
   }

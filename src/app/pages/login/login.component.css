@@ -1,12 +1,12 @@
 /* src/app/pages/login/login.component.css */
 
 .login-container {
-  max-width: 450px; /* Um pouco menor que o cadastro de veículo, opcional */
-  margin: 50px auto; /* Centraliza e adiciona margem no topo */
+  max-width: 450px; 
+  margin: 50px auto; 
   padding: 30px;
   border: 1px solid #ddd;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave como nos cards */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
   background-color: #fff;
 }
 
@@ -18,7 +18,7 @@
 }
 
 .login-container form div {
-  margin-bottom: 20px; /* Aumenta o espaçamento entre os campos */
+  margin-bottom: 20px; 
 }
 
 .login-container label {
@@ -48,7 +48,7 @@
 .login-container button[type="submit"] {
   width: 100%;
   padding: 12px 15px;
-  background-color: #007bff; /* Azul padrão */
+  background-color: #007bff; 
   color: white;
   border: none;
   border-radius: 4px;
@@ -58,7 +58,7 @@
 }
 
 .login-container button[type="submit"]:hover {
-  background-color: #0056b3; /* Azul mais escuro no hover */
+  background-color: #0056b3; 
 }
 
 .login-container button[type="submit"]:disabled {
@@ -67,7 +67,7 @@
 }
 
 .error-message {
-  color: #dc3545; /* Vermelho para erros */
+  color: #dc3545; 
   font-size: 0.9em;
   margin-top: 8px;
   padding: 8px;
@@ -93,13 +93,12 @@
   text-decoration: underline;
 }
 
-/* Para as mensagens de erro de validação inline dos campos */
 .login-container form div .error-message {
   color: #dc3545;
   font-size: 0.85em;
   margin-top: 5px;
-  padding: 0; /* Remove padding extra se for inline */
-  background-color: transparent; /* Remove fundo se for inline */
-  border: none; /* Remove borda se for inline */
-  text-align: left; /* Alinha à esquerda para erros de campo */
+  padding: 0; 
+  background-color: transparent; 
+  border: none; 
+  text-align: left; 
 }

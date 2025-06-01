@@ -11,6 +11,12 @@
       "nome": "Jozinho",
       "email": "joaovitorhs1408@gmail.com",
       "senha": "Gato123"
+    },
+    {
+      "id": "6284",
+      "nome": "Wagner Rodrigues",
+      "email": "Wagner123@gmail.com",
+      "senha": "1234"
     }
   ],
   "veiculos": [
@@ -23,7 +29,7 @@
       "placa": "ABC1D23",
       "clienteNome": "João Silva",
       "contatoCliente": "joao@email.com",
-      "status": "em manutencao" 
+      "status": "em manutencao"
     },
     {
       "id": "2",

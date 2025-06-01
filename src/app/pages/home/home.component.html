@@ -20,14 +20,37 @@
     </div>
 
     <div class="veiculos-grid" *ngIf="!loadingVeiculos && veiculosEmManutencao.length > 0">
-      <div *ngFor="let veiculo of veiculosEmManutencao" class="veiculo-card">
-        <h3>{{ veiculo.marca }} {{ veiculo.modelo }}</h3>
-        <p><strong>Placa:</strong> {{ veiculo.placa }}</p>
-        <p><strong>Ano:</strong> {{ veiculo.ano }}</p>
-        <p><strong>Cliente:</strong> {{ veiculo.clienteNome }}</p>
-        <p><strong>Contato:</strong> {{ veiculo.contatoCliente }}</p>
-        <p><strong>Status:</strong> <span class="status-chip status-{{veiculo.status.replace(' ', '-')}}">{{ veiculo.status | titlecase }}</span></p>
-        </div>
+  <div *ngFor="let veiculo of veiculosEmManutencao" class="veiculo-card">
+    <h3>{{ veiculo.marca }} {{ veiculo.modelo }}</h3>
+    <p><strong>Placa:</strong> {{ veiculo.placa }}</p>
+    <p><strong>Ano:</strong> {{ veiculo.ano }}</p>
+    <p><strong>Cliente:</strong> {{ veiculo.clienteNome }}</p>
+    <p><strong>Contato:</strong> {{ veiculo.contatoCliente }}</p>
+    <p>
+      <strong>Status Atual:</strong>
+      <span class="status-chip status-{{veiculo.status.replace(' ', '-')}}">
+        {{ veiculo.status | titlecase }}
+      </span>
+    </p>
+
+    <div class="veiculo-actions">
+      <div class="status-changer">
+        <label for="status-{{veiculo.id}}">Mudar Status:</label>
+        <select
+          id="status-{{veiculo.id}}"
+          #statusSelect
+          (change)="onStatusChange(veiculo, statusSelect.value)"
+          [value]="veiculo.status">
+          <option *ngFor="let status of statusOptions" [value]="status">
+            {{ status | titlecase }}
+          </option>
+        </select>
+      </div>
+      <button
+        (click)="onApagarVeiculo(veiculo.id!, veiculo.marca + ' ' + veiculo.modelo + ' (' + veiculo.placa + ')')"
+        class="btn-delete">
+        Apagar Veículo
+      </button>
     </div>
-  </main>
+    </div>
 </div>

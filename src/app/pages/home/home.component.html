@@ -29,23 +29,10 @@
     <p>
       <strong>Status Atual:</strong>
       <span class="status-chip status-{{veiculo.status.replace(' ', '-')}}">
-        {{ veiculo.status | titlecase }}
-      </span>
+        {{ veiculo.status | titlecase }} </span>
     </p>
 
     <div class="veiculo-actions">
-      <div class="status-changer">
-        <label for="status-{{veiculo.id}}">Mudar Status:</label>
-        <select
-          id="status-{{veiculo.id}}"
-          #statusSelect
-          (change)="onStatusChange(veiculo, statusSelect.value)"
-          [value]="veiculo.status">
-          <option *ngFor="let status of statusOptions" [value]="status">
-            {{ status | titlecase }}
-          </option>
-        </select>
-      </div>
       <button
         (click)="onApagarVeiculo(veiculo.id!, veiculo.marca + ' ' + veiculo.modelo + ' (' + veiculo.placa + ')')"
         class="btn-delete">

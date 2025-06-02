@@ -29,7 +29,7 @@
       "placa": "ABC1D23",
       "clienteNome": "João Silva",
       "contatoCliente": "joao@email.com",
-      "status": "em manutencao"
+      "status": "concluido"
     },
     {
       "id": "2",
@@ -51,7 +51,51 @@
       "placa": "QWE4R56",
       "clienteNome": "Wagner Rodrigues",
       "contatoCliente": "Wag.p@email.com",
-      "status": "em manutencao"
+      "status": "aguardando pecas"
+    },
+    {
+      "id": "dcd4",
+      "marca": "Fiat Uno",
+      "modelo": "4 Portas ",
+      "ano": 2025,
+      "placa": "abc123",
+      "clienteNome": "Wagner Rodrigues",
+      "contatoCliente": "81555555555",
+      "status": "aguardando pecas",
+      "usuarioId": "6001"
+    },
+    {
+      "id": "34ef",
+      "marca": "Fiat Uno",
+      "modelo": "123",
+      "ano": 2025,
+      "placa": "1233",
+      "clienteNome": "Wagner Rodrigues",
+      "contatoCliente": "joaovitorhs1408@gmail.com",
+      "status": "aguardando aprovacao",
+      "usuarioId": "6001"
+    },
+    {
+      "id": "ce36",
+      "marca": "Fiat Uno",
+      "modelo": "4 Portas ",
+      "ano": 2025,
+      "placa": "abc123",
+      "clienteNome": "Wagner Rodrigues",
+      "contatoCliente": "joaovitorhs1408@gmail.com",
+      "status": "liberado",
+      "usuarioId": "6001"
+    },
+    {
+      "id": "7861",
+      "marca": "Fiat Uno",
+      "modelo": "123",
+      "ano": 2025,
+      "placa": "abc123",
+      "clienteNome": "Wagner Rodrigues",
+      "contatoCliente": "joaovitorhs1408@gmail.com",
+      "status": "aguardando aprovacao",
+      "usuarioId": "6001"
     }
   ],
   "ordensDeServico": []

@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule, TitleCasePipe } from '@angular/common'; 
 import { Router, RouterModule } from '@angular/router';
 import { AuthService, User } from '../../services/auth.service';
-import { VehicleService, Veiculo } from '../../services/vehicle.service';
-
+import { VehicleService, Veiculo } from '../../services/vehicle.service'; 
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -16,7 +15,6 @@ export class HomeComponent implements OnInit {
   veiculosEmManutencao: Veiculo[] = [];
   loadingVeiculos = true;
   errorLoadingVeiculos = '';
-  statusOptions: Veiculo['status'][] = ['em manutencao', 'aguardando pecas', 'concluido', 'aguardando aprovacao', 'liberado'];
 
   constructor(
     private authService: AuthService,
@@ -42,7 +40,7 @@ export class HomeComponent implements OnInit {
   carregarVeiculosEmManutencao(usuarioId: string): void {
     this.loadingVeiculos = true;
     this.errorLoadingVeiculos = '';
-    this.vehicleService.getTodosVeiculosEmManutencao().subscribe({ // Ou getVeiculosEmManutencaoPorUsuario(usuarioId)
+    this.vehicleService.getTodosVeiculosEmManutencao().subscribe({
       next: (veiculos) => {
         this.veiculosEmManutencao = veiculos;
         this.loadingVeiculos = false;
@@ -51,33 +49,6 @@ export class HomeComponent implements OnInit {
         console.error('Erro ao carregar veículos:', err);
         this.errorLoadingVeiculos = 'Não foi possível carregar os veículos em manutenção.';
         this.loadingVeiculos = false;
-      }
-    });
-  }
-  onStatusChange(veiculo: Veiculo, novoStatusString: string): void {
-    const novoStatus = novoStatusString as Veiculo['status']; 
-    if (!veiculo.id) {
-      console.error('ID do veículo não encontrado para atualizar status.');
-      return;
-    }
-    
-    this.vehicleService.atualizarVeiculo(veiculo.id, { status: novoStatus }).subscribe({
-      next: (veiculoAtualizado) => {
-        console.log('Status atualizado:', veiculoAtualizado);
-        if (novoStatus !== 'em manutencao' && this.errorLoadingVeiculos === '') { 
-           this.veiculosEmManutencao = this.veiculosEmManutencao.filter(v => v.id !== veiculo.id);
-        } else {
-          const index = this.veiculosEmManutencao.findIndex(v => v.id === veiculo.id);
-          if (index !== -1) {
-            this.veiculosEmManutencao[index] = veiculoAtualizado;
-          }
-        }
-      },
-      error: (err) => {
-        console.error('Erro ao atualizar status:', err);
-        alert('Erro ao atualizar o status. Tente novamente.');
-        
-        if(this.currentUser?.id) this.carregarVeiculosEmManutencao(this.currentUser.id);
       }
     });
   }

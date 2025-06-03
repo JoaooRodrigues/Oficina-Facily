@@ -5,20 +5,14 @@
       "nome": "Usuario Teste",
       "email": "teste@email.com",
       "senha": "123"
-    }
-  ],
-  "veiculos": [
+    },
     {
-      "id": "9b75",
-      "marca": "Storm 300",
-      "modelo": "Esportiva",
-      "ano": 2025,
-      "placa": "JK201AS",
-      "clienteNome": "João Rodrigues",
-      "contatoCliente": "(81) 988200466",
-      "status": "em manutencao",
-      "usuarioId": "6001"
+      "id": "ab53",
+      "nome": "João Rodrigue",
+      "email": "Joao@gmail.com",
+      "senha": "1234"
     }
   ],
+  "veiculos": [],
   "ordensDeServico": []
 }

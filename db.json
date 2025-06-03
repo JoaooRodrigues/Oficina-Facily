@@ -5,129 +5,18 @@
       "nome": "Usuario Teste",
       "email": "teste@email.com",
       "senha": "123"
-    },
-    {
-      "id": "6001",
-      "nome": "Jozinho",
-      "email": "joaovitorhs1408@gmail.com",
-      "senha": "Gato123"
-    },
-    {
-      "id": "6284",
-      "nome": "Wagner Rodrigues",
-      "email": "Wagner123@gmail.com",
-      "senha": "1234"
     }
   ],
   "veiculos": [
     {
-      "id": "1",
-      "usuarioId": "1",
-      "marca": "Fiat",
-      "modelo": "Uno",
-      "ano": 2020,
-      "placa": "ABC1D23",
-      "clienteNome": "João Silva",
-      "contatoCliente": "joao@email.com",
-      "status": "concluido"
-    },
-    {
-      "id": "2",
-      "usuarioId": "1",
-      "marca": "Volkswagen",
-      "modelo": "Gol",
-      "ano": 2018,
-      "placa": "XYZ8B90",
-      "clienteNome": "Jeffeson Henrique",
-      "contatoCliente": "Jeff.o@email.com",
-      "status": "aguardando pecas"
-    },
-    {
-      "id": "3",
-      "usuarioId": "1",
-      "marca": "Chevrolet",
-      "modelo": "Onix",
-      "ano": 2022,
-      "placa": "QWE4R56",
-      "clienteNome": "Wagner Rodrigues",
-      "contatoCliente": "Wag.p@email.com",
-      "status": "aguardando pecas"
-    },
-    {
-      "id": "dcd4",
-      "marca": "Fiat Uno",
-      "modelo": "4 Portas ",
+      "id": "9b75",
+      "marca": "Storm 300",
+      "modelo": "Esportiva",
       "ano": 2025,
-      "placa": "abc123",
-      "clienteNome": "Wagner Rodrigues",
-      "contatoCliente": "81555555555",
-      "status": "aguardando pecas",
-      "usuarioId": "6001"
-    },
-    {
-      "id": "34ef",
-      "marca": "Fiat Uno",
-      "modelo": "123",
-      "ano": 2025,
-      "placa": "1233",
-      "clienteNome": "Wagner Rodrigues",
-      "contatoCliente": "joaovitorhs1408@gmail.com",
-      "status": "aguardando aprovacao",
-      "usuarioId": "6001"
-    },
-    {
-      "id": "ce36",
-      "marca": "Fiat Uno",
-      "modelo": "4 Portas ",
-      "ano": 2025,
-      "placa": "abc123",
-      "clienteNome": "Wagner Rodrigues",
-      "contatoCliente": "joaovitorhs1408@gmail.com",
-      "status": "liberado",
-      "usuarioId": "6001"
-    },
-    {
-      "id": "7861",
-      "marca": "Fiat Uno",
-      "modelo": "123",
-      "ano": 2025,
-      "placa": "abc123",
-      "clienteNome": "Wagner Rodrigues",
-      "contatoCliente": "joaovitorhs1408@gmail.com",
-      "status": "aguardando aprovacao",
-      "usuarioId": "6001"
-    },
-    {
-      "id": "81f2",
-      "marca": "Fiat Uno",
-      "modelo": "4 Portas ",
-      "ano": 2025,
-      "placa": "abc123",
-      "clienteNome": "Wagner Rodrigues",
-      "contatoCliente": "joaovitorhs1408@gmail.com",
+      "placa": "JK201AS",
+      "clienteNome": "João Rodrigues",
+      "contatoCliente": "(81) 988200466",
       "status": "em manutencao",
-      "usuarioId": "6001"
-    },
-    {
-      "id": "0d4d",
-      "marca": "Storm 300",
-      "modelo": "Moto ",
-      "ano": 2025,
-      "placa": "BcA123",
-      "clienteNome": "João Rodrigues",
-      "contatoCliente": "8199928282",
-      "status": "aguardando pecas",
-      "usuarioId": "6001"
-    },
-    {
-      "id": "8bce",
-      "marca": "Storm 300",
-      "modelo": "123",
-      "ano": 2025,
-      "placa": "abc123",
-      "clienteNome": "João Rodrigues",
-      "contatoCliente": "182882828282",
-      "status": "liberado",
       "usuarioId": "6001"
     }
   ],

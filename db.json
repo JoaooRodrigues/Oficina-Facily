@@ -96,6 +96,39 @@
       "contatoCliente": "joaovitorhs1408@gmail.com",
       "status": "aguardando aprovacao",
       "usuarioId": "6001"
+    },
+    {
+      "id": "81f2",
+      "marca": "Fiat Uno",
+      "modelo": "4 Portas ",
+      "ano": 2025,
+      "placa": "abc123",
+      "clienteNome": "Wagner Rodrigues",
+      "contatoCliente": "joaovitorhs1408@gmail.com",
+      "status": "em manutencao",
+      "usuarioId": "6001"
+    },
+    {
+      "id": "0d4d",
+      "marca": "Storm 300",
+      "modelo": "Moto ",
+      "ano": 2025,
+      "placa": "BcA123",
+      "clienteNome": "João Rodrigues",
+      "contatoCliente": "8199928282",
+      "status": "aguardando pecas",
+      "usuarioId": "6001"
+    },
+    {
+      "id": "8bce",
+      "marca": "Storm 300",
+      "modelo": "123",
+      "ano": 2025,
+      "placa": "abc123",
+      "clienteNome": "João Rodrigues",
+      "contatoCliente": "182882828282",
+      "status": "liberado",
+      "usuarioId": "6001"
     }
   ],
   "ordensDeServico": []

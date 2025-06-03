@@ -29,3 +29,9 @@ Pré-requisitos:
 - Node.js instalado
 - Angular CLI instalado globalmente
 - JSON Server instalado (`npm install -g json-server`)
+
+
+                                                   Participantes do Projeto
+                                                   
+João Vitor Rodrigues da Silva
+Wagner Henrique Cordeiro Rodrigues
